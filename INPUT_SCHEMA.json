@@ -1,0 +1,41 @@
+{
+  "title": "Premium Social Media Analytics Platform Configuration",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Target URLs",
+      "type": "array",
+      "description": "URLs to analyze",
+      "editor": "requestListSources",
+      "default": [
+        {
+          "url": "https://example.com"
+        }
+      ]
+    },
+    "maxItems": {
+      "title": "Maximum Items",
+      "type": "integer",
+      "default": 1000,
+      "minimum": 1,
+      "maximum": 10000
+    },
+    "enableAnalytics": {
+      "title": "Enable Premium Analytics",
+      "type": "boolean",
+      "default": true
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": true
+      }
+    }
+  },
+  "required": [
+    "startUrls"
+  ]
+}
